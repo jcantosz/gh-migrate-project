@@ -61,7 +61,7 @@ jobs:
         env:
           IMPORT_GITHUB_TOKEN: ${{ secrets.GH_MIGRATE_PROJECT_SANDBOX_TOKEN }}
       - name: Upload outputs as artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: macos-outputs
           path: output
@@ -108,7 +108,7 @@ jobs:
         env:
           IMPORT_GITHUB_TOKEN: ${{ secrets.GH_MIGRATE_PROJECT_SANDBOX_TOKEN }}
       - name: Upload outputs as artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: linux-outputs
           path: output
@@ -153,7 +153,7 @@ jobs:
         env:
           IMPORT_GITHUB_TOKEN: ${{ secrets.GH_MIGRATE_PROJECT_SANDBOX_TOKEN }}
       - name: Upload outputs as artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: windows-outputs
           path: output
@@ -200,7 +200,7 @@ jobs:
         env:
           IMPORT_GITHUB_TOKEN: ${{ secrets.GHES_315_ACCESS_TOKEN }}
       - name: Upload outputs as artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: linux-outputs-ghes-315
           path: output
@@ -247,7 +247,7 @@ jobs:
         env:
           IMPORT_GITHUB_TOKEN: ${{ secrets.GHES_316_ACCESS_TOKEN }}
       - name: Upload outputs as artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: linux-outputs-ghes-316
           path: output
@@ -294,7 +294,7 @@ jobs:
         env:
           IMPORT_GITHUB_TOKEN: ${{ secrets.GHES_317_ACCESS_TOKEN }}
       - name: Upload outputs as artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: linux-outputs-ghes-317
           path: output
@@ -341,7 +341,7 @@ jobs:
         env:
           IMPORT_GITHUB_TOKEN: ${{ secrets.GHES_314_ACCESS_TOKEN }}
       - name: Upload outputs as artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: linux-outputs-ghes-314
           path: output
@@ -369,17 +369,17 @@ jobs:
       - name: Rename Linux binary to conform to GitHub CLI extension rules
         run: mv bin/migrate-project-linux bin/gh-migrate-project-linux-amd64
       - name: Upload macOS binary as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: package-macos
           path: bin/gh-migrate-project-darwin-amd64
       - name: Upload Linux binary as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: package-linux
           path: bin/gh-migrate-project-linux-amd64
       - name: Upload Windows binary as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: package-windows
           path: bin/gh-migrate-project-windows-amd64.exe
